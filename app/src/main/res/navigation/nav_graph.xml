@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/login">
+
+    <include
+        app:graph="@navigation/nav_graph_2"
+        />
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.bu.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_signUpPart1Fragment"
+            app:destination="@id/signUpPart1Fragment" />
+        <action
+            android:id="@+id/action_login_to_helloFragment"
+            app:destination="@id/helloFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpPart1Fragment"
+        android:name="com.example.bu.SignUpPart1Fragment"
+        android:label="fragment_sign_up_part1"
+        tools:layout="@layout/fragment_sign_up_part1" >
+        <action
+            android:id="@+id/action_signUpPart1Fragment_to_signUpPart2Fragment"
+            app:destination="@id/signUpPart2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpPart2Fragment"
+        android:name="com.example.bu.SignUpPart2Fragment"
+        android:label="fragment_sign_up_part2"
+        tools:layout="@layout/fragment_sign_up_part2" >
+        <action
+            android:id="@+id/action_signUpPart2Fragment_to_signUpPart3Fragment"
+            app:destination="@id/signUpPart3Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpPart3Fragment"
+        android:name="com.example.bu.SignUpPart3Fragment"
+        android:label="fragment_sign_up_part3"
+        tools:layout="@layout/fragment_sign_up_part3" >
+        <action
+            android:id="@+id/action_signUpPart3Fragment_to_helloFragment"
+            app:destination="@id/helloFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/helloFragment"
+        android:name="com.example.bu.HelloFragment"
+        android:label="fragment_hello"
+        tools:layout="@layout/fragment_hello" >
+        <action
+            android:id="@+id/action_helloFragment_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <navigation android:id="@+id/navigation_after_login"
+        app:startDestination="@id/feedFragment2">
+        <fragment
+            android:id="@+id/profileFragment2"
+            android:name="com.example.bu.ProfileFragment"
+            android:label="fragment_profile"
+            tools:layout="@layout/fragment_profile" />
+        <fragment
+            android:id="@+id/createPostFragment2"
+            android:name="com.example.bu.CreatePostFragment"
+            android:label="fragment_create_post"
+            tools:layout="@layout/fragment_create_post" />
+        <fragment
+            android:id="@+id/feedFragment2"
+            android:name="com.example.bu.FeedFragment"
+            android:label="fragment_feed"
+            tools:layout="@layout/fragment_feed" />
+        <fragment
+            android:id="@+id/friendFragment2"
+            android:name="com.example.bu.FriendFragment"
+            android:label="fragment_friend"
+            tools:layout="@layout/fragment_friend" />
+    </navigation>
+</navigation>
