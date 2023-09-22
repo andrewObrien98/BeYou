@@ -16,6 +16,7 @@ import com.example.bu.viewModel.CurrentUserViewModel;
 import com.example.bu.viewModel.LoginViewModel;
 import com.example.bu.viewModel.PostViewModel;
 
+
 public class CreatePostFragment extends Fragment {
 
     @Override
